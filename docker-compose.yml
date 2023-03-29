@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql-container
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./db:/usr/share/db
+    restart: always
+  webservergo:
+    build: .
+    ports:
+      - "8080:8080"
