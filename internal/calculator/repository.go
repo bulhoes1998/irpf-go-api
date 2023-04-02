@@ -1,6 +1,8 @@
 package calculator
 
 import (
+	"database/sql"
+
 	"github.com/bulhoes1998/irpf-go-api/internal/orders"
 	"github.com/bulhoes1998/irpf-go-api/utils"
 )
@@ -13,7 +15,7 @@ type calculatorRepository struct {
 	orderRepository orders.OrderRepository
 }
 
-func NewCalculatorRepository(orderRepository orders.OrderRepository) *calculatorRepository {
+func NewCalculatorRepository(orderRepository orders.OrderRepository, db *sql.DB) *calculatorRepository {
 	return &calculatorRepository{
 		orderRepository: orderRepository,
 	}
