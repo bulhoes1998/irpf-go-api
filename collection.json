@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "af6df2eb-2c57-4e20-97a8-1fb9b9111b6d",
+		"name": "irpf-go-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/swing_trade/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_type\": \"compra\",\n    \"stock_name\": \"BBAS3\",\n    \"datetime\": \"2023-03-21T22:10:54-03:00\",\n    \"quantity\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/swing_trade/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"swing_trade",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/day_trade/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stock_name\": \"BBAS3\",\n    \"quantity\": 200,\n    \"buy_price\": 35.64,\n    \"sell_price\": 37.82,\n    \"datetime\": \"2023-03-21T20:10:34-03:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/day_trade/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"day_trade",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/darf/{month}/{year}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/darf/03/2023",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"darf",
+						"03",
+						"2023"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
